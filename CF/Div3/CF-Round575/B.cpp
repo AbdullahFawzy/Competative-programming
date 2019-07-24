@@ -2,10 +2,6 @@
 
 using namespace std;
 
-int q;
-int n, k;
-int arr[200005];
-vector<int>ans;
 int main() {
 	scanf("%d", &q);
 
@@ -21,10 +17,11 @@ int main() {
 				++odd;
 				if(odd <= k)
 					ans.push_back(j+1);
+				else ++even;
 			}
 
 		}
-		if(odd < k) printf("NO\n");
+		if(odd < k || (even+1)%2 == 0) printf("NO\n");
 		else{
 
 			printf("YES\n");
