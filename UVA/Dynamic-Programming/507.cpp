@@ -1,9 +1,3 @@
-/*
-*	if tie choose the longest cycling
-*	if tie choose the earliest i
-*/
-
-
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -32,7 +26,6 @@ int main() {
 		}
 
 		sum = 0;
-		bool flag = 0;
 		for (int k = 0; k < R - 1; k++) {
 			sum += A[k];
 			if (sum < 0) {
@@ -47,7 +40,6 @@ int main() {
 					lj = j;
 					li = i;
 				}
-				flag = 1;
 			}
 		}
 
