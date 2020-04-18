@@ -17,10 +17,10 @@ long long int solve(int id, int remW) {
 }
 
 int main() {
-		cin >> N >> W;
-		for (int i = 0; i < N; i++)
-			cin >> A[i] >> B[i];
+	cin >> N >> W;
+	for (int i = 0; i < N; i++)
+		cin >> A[i] >> B[i];
 
-		memset(dp, -1, sizeof dp);
-		cout << solve(0, W) << endl;		
+	memset(dp, -1, sizeof dp);
+	cout << solve(0, W) << endl;		
 }
