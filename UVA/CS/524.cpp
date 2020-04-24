@@ -22,10 +22,11 @@ void sieve() {
 }
 
 void solve(int curr, int collect) {
-	if (collect == N && prime[s[0] + s[N - 1]]) {
-		ans.push_back(s);
+	if (collect == N) {
+		if (prime[s[0] + s[N - 1]])
+			ans.push_back(s);
 		return;
-	} else if (collect == N && !prime[s[0] + s[N - 1]]) return;
+	}
 
 	for (int i = 2; i <= N; i++) {
 		if (check[i] || !prime[i + curr]) continue;
