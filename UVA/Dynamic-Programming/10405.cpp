@@ -1,0 +1,34 @@
+// The worst code i have ever written
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define F 	first
+#define S 	second
+#define ll 	long long int
+
+int main() {
+	string s, t;
+	while(1) {
+		if (getline(cin, s).eof() || 
+			getline(cin, t).eof()) break;
+
+		int n = (int) s.size(), m = (int) t.size();
+
+		vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+		int ans = 0;
+
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= m; j++) {
+				if (s[i - 1] == t[j - 1])
+					dp[i][j] = 1 + dp[i - 1][j - 1];
+				else dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+				ans = max(ans, dp[i][j]);
+			}
+		}
+
+		cout << ans << endl;
+	}
+	return 0;
+}
