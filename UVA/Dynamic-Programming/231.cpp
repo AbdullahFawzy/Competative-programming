@@ -1,5 +1,3 @@
-// The worst code i have ever written
-
 #include <bits/stdc++.h>
 
 using namespace std;
